@@ -2,9 +2,20 @@ python work
 
 To do a git push
 
+#exit python
+
 >>> exit()
+
+#get in directory you want to push file from
+
 [user01@unst26 ~]$ cd my-isc-work/python_work
+
+#do a git add
+
 [user01@unst26 python_work]$ git add README.txt
+
+#do a git commit and name file, then input password
+
 [user01@unst26 python_work]$ git commit -m"pythonstuff"
 [master f80274b] pythonstuff
  1 files changed, 159 insertions(+), 0 deletions(-)
