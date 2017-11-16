@@ -1,5 +1,24 @@
 python work
 
+To do a git push
+
+>>> exit()
+[user01@unst26 ~]$ cd my-isc-work/python_work
+[user01@unst26 python_work]$ git add README.txt
+[user01@unst26 python_work]$ git commit -m"pythonstuff"
+[master f80274b] pythonstuff
+ 1 files changed, 159 insertions(+), 0 deletions(-)
+[user01@unst26 python_work]$ git push
+Counting objects: 7, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 1.46 KiB, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://gs1065@github.com/gs1065/my-isc-work.git
+   c72140e..f80274b  master -> master
+
+
 Day 4
 #list starts square brackets, tuple starts normal brackets. Tuple imutable sequance (can't change), list can change. Can convert a list to a tuple. i.e. tup = tuple(a) where a is list a. Tuples handy as can assign variables, i.e. x, y, z = a 
 # then data files
