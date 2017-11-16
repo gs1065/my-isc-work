@@ -393,3 +393,54 @@ ussr ussr
 >>> print res,  d["rob"]
 cars cars
 
+
+masked arrays
+>>> import numpy.ma as MA#
+>>> import numpy.ma as MA
+>>> marr = MA.masked_array(range(10), fill_value = -999)
+>>> print marr, marr.fill_value
+[0 1 2 3 4 5 6 7 8 9] -999
+>>> marr[2] = MA. masked
+>>> print marr
+[0 1 -- 3 4 5 6 7 8 9]
+>>> print marr.mask
+[False False  True False False False False False False False]
+>>> narr = MA.masked_where(marr > 6, marr)
+>>> print narr
+[0 1 -- 3 4 5 6 -- -- --]
+>>> x = MA.filled(narr)
+>>> print x
+[   0    1 -999    3    4    5    6 -999 -999 -999]
+>>> print type(x)
+<type 'numpy.ndarray'>
+>>> m1 = MA.masked_array(1,9))
+  File "<stdin>", line 1
+    m1 = MA.masked_array(1,9))
+                             ^
+SyntaxError: invalid syntax
+>>> m1 = MA.masked_array(range(1, 9))
+>>> print m1
+[1 2 3 4 5 6 7 8]
+>>> print m2
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'm2' is not defined
+>>> m2 = m1.reshape(2, 4)
+>>> print m2
+[[1 2 3 4]
+ [5 6 7 8]]
+>>> m3 = MA.masked_greater(m2, 6)
+>>> print m3
+[[1 2 3 4]
+ [5 6 -- --]]
+>>> res = m3 - np.ones((2, 4))
+>>> print res
+[[0.0 1.0 2.0 3.0]
+ [4.0 5.0 -- --]]
+>>> print type(res)
+<class 'numpy.ma.core.MaskedArray'>
+>>> y = m3 * 100
+>>> print y
+[[100 200 300 400]
+ [500 600 -- --]]
+>>> 
